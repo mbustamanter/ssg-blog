@@ -166,6 +166,7 @@ Here are a few empty pages connecting to the menu links to show where files can 
 * [menu 1](/menu1/)
 * [menu 2](/menu2/)
 * [menu 3](/menu3/)
+* [Tensors, Part I](/tensor1/)
 
 ## References (not really)
 
