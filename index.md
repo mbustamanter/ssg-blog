@@ -165,6 +165,8 @@ Here are a few empty pages connecting to the menu links to show where files can 
 * [menu 2](/menu2/)
 * [menu 3](/menu3/)
 * [Tensors, Part I](/tensor1/)
+* [Tensors, Part II](/tensor2/)
+* [Matrix Derivatives, Part I](/matder1/)
 
 ## References (not really)
 
