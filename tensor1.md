@@ -13,6 +13,21 @@ $$
 \end{cases}
 $$
 It has the important property of index substitution
-$$a_i \delta_{ij} =a_j $$
-when the summation runs over all $i$'s.
+$$
+a_i \delta_{ij} =a_j
+$$
+when the summation runs over all $i$'s. We can also play with
+higher-order tensors and several Kronecker symbols.
+$$
+b_{ijk} \delta_{jp}\delta_{kq}=b_{ipq} \\
+c_{ijkl} \delta_{jp} \delta_{pq} = c_{iqkl}
+$$
+From the definition it is also clear that it satisfies a
+symmetry property and a dimensional property, since a
+Kronecker delta is defined to act on a particular space
+of dimension $n$.
+$$
+\delta_{ij}=\delta_{ji} \\
+\delta_{ij} \delta_{ji}=\delta_{ii}=n
+$$
 ## Levi-Civita Symbol

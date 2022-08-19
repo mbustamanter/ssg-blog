@@ -36,15 +36,13 @@ function len(p::T) where T<:Point
 end
 ```
 
-You can also quote stuff
 
 > You must have chaos within you to ...
 
-or have tables:
 
 | English         | Mandarin   |
 | --------------- | ---------- |
-| winnie the pooh | 维尼熊      |
+| winnie the pooh |       |
 
 Note that you may have to do a bit of CSS-styling to get these elements to look the way you want them (the same holds for the whole page in fact).
 
