@@ -157,7 +157,6 @@ Marine iguanas are **truly splendid** creatures. They're not found in equations 
 
 ## Pages and structure
 
-Here are a few empty pages connecting to the menu links to show where files can go and the resulting paths. (It's probably best if you look at the source folder for this).
 
 * [menu 1](/menu1/)
 * [menu 2](/menu2/)
@@ -165,6 +164,7 @@ Here are a few empty pages connecting to the menu links to show where files can 
 * [Tensors, Part I](/tensor1/)
 * [Tensors, Part II](/tensor2/)
 * [Matrix Derivatives, Part I](/matder1/)
+* [Integration by parts](/byparts/)
 
 ## References (not really)
 

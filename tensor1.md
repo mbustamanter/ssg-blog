@@ -25,7 +25,7 @@ $$
 From the definition it is also clear that it satisfies a
 symmetry property and a dimensional property, since a
 Kronecker delta is defined to act on a particular space
-of dimension $n$.
+of dimension $n$, generally equal to $3$.
 $$
 \delta_{ij}=\delta_{ji} \\
 \delta_{ij} \delta_{ji}=\delta_{ii}=n
