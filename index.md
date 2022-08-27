@@ -5,18 +5,7 @@
 
 \tableofcontents <!-- you can use \toc as well -->
 
-Have a look at both how the website renders and the corresponding markdown (`index.md`).
-
-Ps: if you want to modify the header or footer or the general look of the website, adjust the files in
-* `src/_css/` and
-* `src/_html_parts/`.
-
 ## The base with Markdown
-
-The [standard markdown syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) can be used such as titles using `#`, lists:
-
-* element with **bold**
-* element with _emph_
 
 or code-blocks `inline` or with highlighting (note the `@def hascode = true` in the source to allow [highlight.js](https://highlightjs.org/) to do its job):
 
@@ -74,23 +63,6 @@ Here we go! (this is styled in the css sheet with name "colbox-blue").
 Since it's just a `<div>` block, you can put this construction wherever you like and locally style your text.
 
 ### LaTeX and Maths
-
-Essentially three things are imitated from LaTeX
-
-1. you can introduce definitions using `\newcommand`
-1. you can use hyper-references with `\eqref`, `\cite`, ...
-1. you can show nice maths (via KaTeX)
-
-The definitions can be introduced in the page or in the `config.md` (in which case they're available everywhere as opposed to just in that page).
-For instance, the commands `\scal` and `\R` are defined in the config file (see `src/config.md`) and can directly be used whereas the command `\E` is defined below (and therefore only available on this page):
-
-\newcommand{\E}[1]{\mathbb E\left[#1\right]}
-
-Now we can write something like
-
-$$  \varphi(\E{X}) \le \E{\varphi(X)}. \label{equation blah} $$
-
-since we've given it the label `\label{equation blah}`, we can refer it like so: \eqref{equation blah} which can be convenient for pages that are math-heavy.
 
 In a similar vein you can cite references that would be at the bottom of the page: \citep{noether15, bezanson17}.
 
@@ -164,7 +136,7 @@ Marine iguanas are **truly splendid** creatures. They're not found in equations 
 * [Tensors, Part I](/tensor1/)
 * [Tensors, Part II](/tensor2/)
 * [Matrix Derivatives, Part I](/matder1/)
-* [Integration by parts](/byparts/)
+* [Integration by parts in $\mathbb R^n$ and applications](/byparts/)
 
 ## References (not really)
 

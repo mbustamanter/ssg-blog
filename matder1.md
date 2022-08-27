@@ -1,6 +1,6 @@
 # Matrix Derivatives, Part I
 Here I will explain how to compute particular cases of matrix
-derivatives using tensor notation. First a simple and quite
+derivatives using tensor notation. First, a simple and quite
 intuitive rule for determining derivatives of matrix components
 with respect to an arbitrary matrix component is stated.
 $$
