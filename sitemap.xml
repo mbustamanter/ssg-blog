@@ -2,31 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
+    <loc>https://tlienart.github.io/FranklinTemplates.jl/2022/matder1/index.html</loc>
+    <lastmod>2022-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
     <loc>https://tlienart.github.io/FranklinTemplates.jl/index.html</loc>
     <lastmod>2022-08-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>https://tlienart.github.io/FranklinTemplates.jl/tensor1/index.html</loc>
+    <loc>https://tlienart.github.io/FranklinTemplates.jl/2022/tensor2/index.html</loc>
     <lastmod>2022-08-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>https://tlienart.github.io/FranklinTemplates.jl/tensor2/index.html</loc>
+    <loc>https://tlienart.github.io/FranklinTemplates.jl/2022/byparts/index.html</loc>
     <lastmod>2022-08-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>https://tlienart.github.io/FranklinTemplates.jl/byparts/index.html</loc>
-    <lastmod>2022-08-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
-    <loc>https://tlienart.github.io/FranklinTemplates.jl/matder1/index.html</loc>
+    <loc>https://tlienart.github.io/FranklinTemplates.jl/2022/tensor1/index.html</loc>
     <lastmod>2022-08-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
