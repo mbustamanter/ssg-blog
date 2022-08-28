@@ -1,3 +1,4 @@
+@def title = "Integration by parts"
 # Integration by parts in $\mathbb R^n$ and applications
 \toc
 ## The Basic Theorems
@@ -20,10 +21,10 @@ $$
 $$
 where $\frac{\partial u}{\partial \nu}$ is defined to be equal to
 the inner product between the gradient and the outward unit vector,
-$Du \cdot \nu$. Analogously, applying again \eqref{basic int} to
+$\scal{\grad u \cdot \nu}$. Analogously, applying again \eqref{basic int} to
 the products $u v_{x_i}$ and summing over $i$ one gets
 $$
-\int_U Du \cdot Dv dx = -\int_{\partial U} u\Delta v dx
+\int_U \scal{\grad u \cdot \grad v} dx = -\int_{\partial U} u\Delta v dx
 +\int_{\partial U} u \frac{\partial v}{\partial \nu} dS
 \label{int 4}
 $$
@@ -37,6 +38,19 @@ $$
 ### Energy Methods
 #### Wave Equation
 Let $u \in C^2(\mathbb R^n \times (0,\infty))$ be a solution of
+$$
+\begin{cases}
+u_{tt}=c^2 \Delta u & (x,t) \in \R^n \times (0,\infty) \\
+u(x,0)=g(x) & x \in \R^n \\
+u_t(x,0)=h(x) & x \in \R^n
+\end{cases}
+$$
+Define the energy functional
+$$
+E(t)=\frac 1 2 \int_{\R^n} \lparen u_t^2 +c^2 \norm{\grad u}^2 \rparen dx
+$$
+to prove that there is indeed _conservation_ of energy we will differentiate
+$E$ to arrive at
 ### Weak Formulation (sometimes solutions)
 #### Biharmonic Equation
 #### Advection-Diffusion-Reaction Equation

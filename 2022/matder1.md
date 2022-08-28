@@ -1,4 +1,4 @@
-# Matrix Derivatives, Part I
+# Matrix Derivatives I
 Here I will explain how to compute particular cases of matrix
 derivatives using tensor notation. First, a simple and quite
 intuitive rule for determining derivatives of matrix components
@@ -15,7 +15,9 @@ in all these manipulations.
 \newcommand{\tr}{\textnormal{Tr}}
 $$
 \frac{\partial}{ \partial X} \tr(X)=I \\
-\frac{\partial}{\partial }
+\frac{\partial}{\partial X} \tr(XA)=A^T \\
+\frac{\partial}{\partial X} \tr(AXB)=A^T B^T \\
+\frac{\partial}{\partial X} \tr(AX^T B)=BA \\
 \label{simp prob 1}
 $$
 \eqref{simp prob 1} is tackled.
