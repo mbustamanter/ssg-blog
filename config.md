@@ -29,3 +29,4 @@ Add here global latex commands to use throughout your pages.
 \newcommand{\grad}{\textnormal{grad}}
 \newcommand{\dive}{\textnormal{div}}
 \newcommand{\norm}[1]{\left \lVert #1 \right \rVert}
+\newcommand{\par}[1]{\left ( #1 \right )}
