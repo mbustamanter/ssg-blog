@@ -34,8 +34,23 @@ $$
 \int_U (u\Delta v-v\Delta u) dx =
 \int_{\partial U} \left ( u\frac{\partial v}{\partial \nu}-v\frac{\partial u}{\partial \nu} \right ) dS
 $$
-Two often overlooked identities are related to the biharmonic operator and are
-consequences of the former relations
+Two often overlooked identities are related to the biharmonic operator and fall
+as corollaries of the former relations are
+$$
+\int_U u \Delta^2 v dx= \int_{\partial U} u \frac{ \partial \Delta v}{\partial \nu} dS
+-\int_{\partial U} \Delta v \frac{\partial u}{\partial \nu} dS
++\int_U \Delta u \Delta v dx
+\label{bi1}
+$$
+and for the symmetrical case
+$$
+\int_U \par{u \Delta^2 v-v\Delta^2 u}dx=
+\int_{\partial U} \par{u \frac{\partial \Delta v}{\partial \nu}-
+v\frac{\partial \Delta u}{\partial \nu}} dS
++\int_{\partial U} \par{\Delta u \frac{\partial v}{\partial \nu}-
+v\frac{\partial u}{\partial \nu}}dS
+$$
+as an evident consequence of \eqref{bi1}.
 ## Applications
 ### Energy Methods
 #### Wave Equation
