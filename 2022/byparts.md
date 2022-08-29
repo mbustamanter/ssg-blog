@@ -52,7 +52,7 @@ Where $g$ and $h$ have compact support. Define the energy functional
 $$
 E(t)=\frac 1 2 \int_{\R^n} \par{u_t^2 +c^2 \norm{\grad u}^2}dx
 $$
-to prove that there is indeed _conservation_ of energy we will differentiate
+To prove that there is indeed _conservation_ of energy we will differentiate
 $E$ to arrive at
 $$
 E'(t)=\frac 1 2 \int_{\R^n} \par{2u_t u_{tt}+2\sum_{i=1}^n u_{x_i} u_{x_i t}} dx \\
@@ -72,6 +72,7 @@ $w=u_1-u_2$ satisifies the wave equation with homogeneous boundary conditions.
 We know in this case $E(0)=0$ and it is equal to a constant in the general case,
 so $E(t)=0$ for all $t>0$. This immediately implies $w$ constant, and by initial
 data $w=0$.
+#### Wave Equation
 ### Weak Formulation (sometimes solutions)
 #### Biharmonic Equation
 #### Advection-Diffusion-Reaction Equation

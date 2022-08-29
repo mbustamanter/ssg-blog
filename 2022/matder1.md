@@ -12,12 +12,29 @@ involving traces of the matrix with which we differentiate and traces
 of products of constant matrices with the variable matrix.
 \eqref{matrix der def}, along with the product rule are the protagonists
 in all these manipulations.
-\newcommand{\tr}{\textnormal{Tr}}
+## First-Order Trace Derivatives
 $$
 \frac{\partial}{ \partial X} \tr(X)=I \\
-\frac{\partial}{\partial X} \tr(XA)=A^T \\
-\frac{\partial}{\partial X} \tr(AXB)=A^T B^T \\
-\frac{\partial}{\partial X} \tr(AX^T B)=BA \\
 \label{simp prob 1}
 $$
-\eqref{simp prob 1} is tackled.
+To solve this first problem notice that the trace of $X$ in tensor
+notation is written as $X_{ii}$, that is, with same first and last indices
+$$
+\frac{\partial}{\partial X} \tr(X) = \frac{\partial X_{ii}}{\partial X_{kl}}
+= \delta_{ik} \delta_{il}=\delta_{kl}=I
+$$
+where the last equality is true because the derivative is a second-order
+tensor whose indices must be the same as the ones used to derivate.
+$$
+\frac{\partial}{\partial X} \tr(XA)=A^T
+$$
+For this situation we use the fact that dot product of tensors must
+have equal adjacent indices between terms
+$$
+\frac{\partial}{\partial X} \tr(XA) = \frac{\partial (X_{ij} A_{ji})}{\partial X_{kl}}
+=\frac{\partial X_{ij}}{\partial X_{kl}} A_{ji} = \delta_{ik} \delta_{jl} A_{ji}
+=A_{lk} = (A^T)_{kl}=A^T
+$$
+Now, 
+## Second-Order Trace Derivatives
+## Third-Order Trace Derivatives
