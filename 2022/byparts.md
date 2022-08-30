@@ -1,7 +1,7 @@
 @def title = "Integration by parts"
 # Integration by parts in $\mathbb R^n$ and applications
 \toc
-## The Basic Theorems
+## Review of the Basic Theorems
 In what follows, $U$ is assumed to be an open, bounded subset of
 $\mathbb R ^n$ with $C^1$ boundary and $u$, $v$ sufficiently
 regular functions. Then
@@ -64,7 +64,7 @@ $$
 $$
 ## Applications
 ### Energy Methods
-#### Wave Equation
+#### Wave Equation on $\R^n \times (0,\infty)$
 Let $u \in C^2(\mathbb R^n \times (0,\infty))$ be a solution of
 $$
 \begin{cases}
@@ -102,3 +102,14 @@ data $w=0$.
 ### Weak Formulation (sometimes solutions)
 #### Biharmonic Equation
 #### Advection-Diffusion-Reaction Equation
+$$
+\begin{cases}
+-\dive(\mu \grad u) + \scal{b, \grad u}+cu=s & U \\
+u=g & \Gamma_D \\
+\mu \frac{\partial u}{\partial \nu} = r & \Gamma_N \\
+\mu \frac{\partial u}{\partial \nu} = \gamma & \Gamma_R
+\end{cases}
+$$
+To find the weak formulation, introduce the space
+$$V=\left \{v \in H^1(U): v|_{\Gamma_D}=0\right \}$$
+we mutliply the first equation by $v \in V$ and integrate over $U$.

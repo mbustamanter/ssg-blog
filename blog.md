@@ -1,7 +1,10 @@
 @def title = "Miguel's Blog"
 # Article archive
 \toc
-## Analysis
+## Numerical Analysis
+## Optimization
+## Probability Theory and Statistics
+## Control
 ## Olympiads
 ### Algebra
 ### Number Theory
