@@ -35,21 +35,39 @@ $$
 For this situation we use the fact that dot product of tensors must
 have equal adjacent indices between terms
 $$
-\frac{\partial}{\partial X} \tr(XA) = \frac{\partial (X_{ij} A_{ji})}{\partial X_{kl}}
-=\frac{\partial X_{ij}}{\partial X_{kl}} A_{ji} = \delta_{ik} \delta_{jl} A_{ji}
-=A_{lk} = (A^T)_{kl}=A^T
+\begin{align*}
+\frac{\partial}{\partial X} \tr(XA) & = \frac{\partial (X_{ij} A_{ji})}{\partial X_{kl}}
+=\frac{\partial X_{ij}}{\partial X_{kl}} A_{ji} \\
+& = \delta_{ik} \delta_{jl} A_{ji} =A_{lk} = (A^T)_{kl}=A^T
+\end{align*}
 $$
 The same problem but with the transpose is tackled in the same fashion
 $$
-\frac{\partial}{\partial X} \tr(X^T A)= \frac{\partial (X_{ij}^T A_{ji})}{\partial X_{kl}}
-=\frac{\partial X_{ji}}{\partial X_{kl}} A_{ji} = \delta_{jk} \delta_{il} A_{ji} = A_{kl}
+\begin{align*}
+\frac{\partial}{\partial X} \tr(X^T A) & = \frac{\partial (X_{ij}^T A_{ji})}{\partial X_{kl}}
+=\frac{\partial X_{ji}}{\partial X_{kl}} A_{ji} \\
+& = \delta_{jk} \delta_{il} A_{ji} = A_{kl}
 =A^T
+\end{align*}
 $$
-
+As for the product of $X$ with two constant matrices, there are two index concatenations
+in tensorial notation
 $$
-\tr(AXB)=\frac{\partial (A_{ij} X_{jk} B_{ki})}{\partial X_{pq}}
+\begin{align*}
+\frac{\partial}{\partial X} \tr(AXB) & =\frac{\partial (A_{ij} X_{jk} B_{ki})}{\partial X_{pq}}=
+\frac{\partial X_{jk}}{\partial X_{pq}} A_{ij} B_{ki} = \delta_{jp} \delta_{kq} A_{ij}B_{ki} \\
+& = A_{ip} B_{qi} = B_{qi} A_{ip} = (BA)_{qp}=(BA)_{pq}^T = (BA)^T \\
+& = A^T B^T
+\end{align*}
 $$
-
+and swapping $X$ for $X^T$
+$$
+\begin{align*}
+\frac{\partial}{\partial X}\tr(AX^T B) & =\frac{\partial (A_{ij}X^T_{jk}B_{ki})}{\partial X_{pq}}
+= \frac{\partial X_{kj}}{\partial X_{pq}} A_{ij} B_{ki} = \delta_{kp}\delta_{jq}A_{ij}B_{ki} \\
+& = A_{iq}B_{pi}=B_{pi}A_{iq} = (BA)_{pq}=BA
+\end{align*}
+$$
 ## Second-Order Trace Derivatives
 ### Traces of $X^2$ and $X^2 B$
 ### Traces of $X^T B X$ and $XBX^T$

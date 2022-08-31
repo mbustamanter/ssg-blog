@@ -81,16 +81,20 @@ $$
 To prove that there is indeed _conservation_ of energy we will differentiate
 $E$ to arrive at
 $$
-E'(t)=\frac 1 2 \int_{\R^n} \par{2u_t u_{tt}+2\sum_{i=1}^n u_{x_i} u_{x_i t}} dx \\
-= \int_{\R^n} \par{u_t u_{tt}+\scal{\grad u , \grad u_t}} dx
+\begin{align*}
+E'(t) & =\frac 1 2 \int_{\R^n} \par{2u_t u_{tt}+2\sum_{i=1}^n u_{x_i} u_{x_i t}} dx \\
+& = \int_{\R^n} \par{u_t u_{tt}+\scal{\grad u , \grad u_t}} dx
+\end{align*}
 $$
 Bearing in mind that all the derivatives of functions with compact support also
 have compact support, $u$ and $u_t$ are zero save for a set $U \subseteq \R^n$.
 Applying \eqref{int 4} to the last expression gives
 $$
-E'(t)=\int_U u_t u_{tt} dx -\int_U c^2 u_t \Delta u dx +\int_{\partial U}
+\begin{align*}
+E'(t) & =\int_U u_t u_{tt} dx -\int_U c^2 u_t \Delta u dx +\int_{\partial U}
 u_t \frac{\partial u}{\partial \nu} dS \\
-= \int_U u_t (u_{tt}-c^2\Delta u) dx =0
+& = \int_U u_t (u_{tt}-c^2\Delta u) dx =0
+\end{align*}
 $$
 Hence $E$ is constant over $[0,\infty)$. This also provides uniqueness for the
 equation: suppose $u_1$ and $u_2$ satisfy \eqref{wave-prob}, so their difference
@@ -98,16 +102,34 @@ $w=u_1-u_2$ satisifies the wave equation with homogeneous boundary conditions.
 We know in this case $E(0)=0$ and it is equal to a constant in the general case,
 so $E(t)=0$ for all $t>0$. This immediately implies $w$ constant, and by initial
 data $w=0$.
-#### Wave Equation
+#### Wave Equation on $U \times (0,\infty)$
+Let $U \subseteq \R^n$ be a bounded domain and $a: \R^n \rightarrow \R$ non-negative.
+$$
+\begin{cases}
+u_{tt}-\Delta u & = 0 &  U \times (0,\infty) \\
+u(x,0) & = f(x) & U \\
+u_t(x,0) & =g(x) & U \\
+\frac{\partial u}{\partial \nu} +a(x) u_t & = 0 & \partial U
+\end{cases}
+$$
+we employ the same energy as in the previous example. Differentiation yields
+$$
+\begin{align*}
+E'(t) & = \int_U (u_t u_{tt}+\scal{\grad u, \grad u_t}) dx \\
+& =\int_U u_t u_{tt} dx -\int_U u_t \Delta u dx +
+\int_{\partial U } u_t \frac{\partial u}{\partial \nu} dS
+\end{align*}
+$$
+
 ### Weak Formulation (sometimes solutions)
 #### Biharmonic Equation
 #### Advection-Diffusion-Reaction Equation
 $$
 \begin{cases}
--\dive(\mu \grad u) + \scal{b, \grad u}+cu=s & U \\
-u=g & \Gamma_D \\
-\mu \frac{\partial u}{\partial \nu} = r & \Gamma_N \\
-\mu \frac{\partial u}{\partial \nu} = \gamma & \Gamma_R
+-\dive(\mu \grad u) + \scal{b, \grad u}+cu & =s & U \\
+u & =g & \Gamma_D \\
+\mu \frac{\partial u}{\partial \nu} & = r & \Gamma_N \\
+\mu \frac{\partial u}{\partial \nu} & = \gamma & \Gamma_R
 \end{cases}
 $$
 To find the weak formulation, introduce the space
