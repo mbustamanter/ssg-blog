@@ -70,5 +70,30 @@ $$
 $$
 ## Second-Order Trace Derivatives
 ### Traces of $X^2$ and $X^2 B$
+\begin{align*}
+\frac{\partial}{\partial X} \tr(X^2) & =\frac{\partial (X_{ij}X_{ji})}{\partial X_{pq}}
+=\frac{\partial X_{ij}}{\partial X_{pq}} X_{ji}+X_{ij}\frac{\partial X_{ji}}{\partial X_{pq}} \\
+& = \delta_{ip}\delta_{jq} X_{ji} +X_{ij} \delta_{jp}\delta_{iq} \\
+& =X_{qp}+X_{qp}=2(X^T)_{pq}
+=2X^T
+\end{align*}
+
+\begin{align*}
+\frac{\partial}{\partial X_{pq}} \tr(X^2 B) & = \frac{\partial (X_{ij}X_{jk}B_{ki})}{\partial X_{pq}} \\
+& = \frac{\partial X_{ij}}{\partial X_{pq}} X_{jk}B_{ki}+ X_{ij}\frac{\partial X_{jk}}{\partial X_{pq}}B_{ki} \\
+& = \delta_{ip} \delta_{jq} X_{jk} B_{ki} + X_{ij} \delta_{jp} \delta_{kq} B_{ki}
+= X_{qk}B_{kp}+X_{ip}B_{qi}= (XB)_{qp} + B_{qi}X_{ip} \\
+&=(XB)_{qp}+(BX)_{qp}=(XB+BX)^T_{pq}=(XB+BX)^T
+\end{align*}
 ### Traces of $X^T B X$ and $XBX^T$
+\begin{align*}
+\frac{\partial}{\partial X} \tr(X^T BX) & =
+\end{align*}
 ### Traces of $AXBX$, $B^T XCXB$, $X^T BXC$ and $AXBX^TC$
+\begin{align*}
+\frac{\partial}{\partial X} \tr(AXBX)
+\end{align*}
+
+\begin{align*}
+\frac{\partial}{\partial X} \tr(B^T XCBX)
+\end{align*}
