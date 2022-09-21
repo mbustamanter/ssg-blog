@@ -1,5 +1,5 @@
 @def title = "Integration by parts"
-# Integration by parts in $\mathbb R^n$ and applications
+# Integration by parts in $\mathbb R^n$
 \toc
 ## Review of the Basic Theorems
 In what follows, $U$ is assumed to be an open, bounded subset of

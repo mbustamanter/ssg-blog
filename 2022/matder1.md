@@ -1,4 +1,4 @@
-# Matrix Derivatives I
+# Matrix Derivatives I: Low Order Traces
 \toc
 ## Definition
 Here I will explain how to compute particular cases of matrix
@@ -79,21 +79,49 @@ $$
 \end{align*}
 
 \begin{align*}
-\frac{\partial}{\partial X_{pq}} \tr(X^2 B) & = \frac{\partial (X_{ij}X_{jk}B_{ki})}{\partial X_{pq}} \\
-& = \frac{\partial X_{ij}}{\partial X_{pq}} X_{jk}B_{ki}+ X_{ij}\frac{\partial X_{jk}}{\partial X_{pq}}B_{ki} \\
+\frac{\partial}{\partial X_{pq}} \tr(X^2 B) & =
+\frac{\partial (X_{ij}X_{jk}B_{ki})}{\partial X_{pq}} \\
+& = \frac{\partial X_{ij}}{\partial X_{pq}} X_{jk}B_{ki}
++ X_{ij}\frac{\partial X_{jk}}{\partial X_{pq}}B_{ki} \\
 & = \delta_{ip} \delta_{jq} X_{jk} B_{ki} + X_{ij} \delta_{jp} \delta_{kq} B_{ki}
 = X_{qk}B_{kp}+X_{ip}B_{qi}= (XB)_{qp} + B_{qi}X_{ip} \\
 &=(XB)_{qp}+(BX)_{qp}=(XB+BX)^T_{pq}=(XB+BX)^T
 \end{align*}
 ### Traces of $X^T B X$ and $XBX^T$
 \begin{align*}
-\frac{\partial}{\partial X} \tr(X^T BX) & =
-\end{align*}
-### Traces of $AXBX$, $B^T XCXB$, $X^T BXC$ and $AXBX^TC$
-\begin{align*}
-\frac{\partial}{\partial X} \tr(AXBX)
+\frac{\partial}{\partial X} \tr(X^T BX) & = \frac{\partial (X_{ji}B_{jk}X_{ki})}{\partial X_{pq}}\\
+& = \frac{\partial X_{ji}}{\partial X_{pq}} B_{jk}X_{ki}
++X_{ji}B_{jk} \frac{\partial X_{ki}}{\partial X_{pq}} \\
+& = \delta_{jp}\delta_{iq} B_{jk}X_{ki}+X_{ji}B_{jk}\delta_{kp}\delta_{iq}
+= B_{pk}X_{kq}+X_{jq}B_{jp} \\
+& = (BX)_{pq}+ (B^T)_{pj} X_{jq} = (BX)_{pq}+(B^T X)_{pq}\\
+&=(BX+B^T X)_{pq}=BX+B^T X
 \end{align*}
 
 \begin{align*}
-\frac{\partial}{\partial X} \tr(B^T XCBX)
+\frac{\partial}{\partial X} \tr(XBX^T) &=
+\frac{\partial (X_{ij}B_{jk}X_{ik})}{\partial X_{pq}} \\
+&=\frac{\partial X_{ij}}{\partial X_{pq}} B_{jk}X_{ik}+
+X_{ij}B_{jk} \frac{\partial X_{ik}}{\partial X_{pq}} \\
+&=\delta_{ip}\delta_{jq}B_{jk}X_{ik}+X_{ij}B_{jk}\delta_{ip}\delta_{kq}
+=B_{qk} X_{pk}+X_{pj} B_{jq} \\
+&=X_{pk} (B^T)_{kq}+(XB)_{pq}=(XB^T)_{pq}+(XB)_{pq}=(XB^T+XB)_{pq} \\
+&=XB^T+XB
+\end{align*}
+### Traces of $AXBX$, $B^T XCXB$, $X^T BXC$ and $AXBX^TC$
+\begin{align*}
+\frac{\partial}{\partial X} \tr(AXBX) &=
+\frac{\partial (A_{ij}X_{jk}B_{kl}X_{li})}{\partial X_{pq}}
+\end{align*}
+
+\begin{align*}
+\frac{\partial}{\partial X} \tr(B^T XCBX)=
+\end{align*}
+
+\begin{align*}
+\frac{\partial}{\partial X} \tr(X^TBXC)=
+\end{align*}
+
+\begin{align*}
+\frac{\partial}{\partial X} \tr(AXBX^TC)=
 \end{align*}

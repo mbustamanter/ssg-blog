@@ -5,5 +5,7 @@
 
 * [Tensors I](/2022/tensor1/)
 * [Tensors II](/2022/tensor2/)
-* [Matrix Derivatives I](/2022/matder1/)
-* [Integration by parts in $\mathbb R^n$ and applications](/2022/byparts/)
+* [Matrix Derivatives I: Low Order Traces](/2022/matder1/)
+* [Matrix Derivatives II: Higher Order Traces](/2022/matder2.md)
+* [Integration by parts in $\mathbb R^n$](/2022/byparts/)
+* [Basic Properties of the Prox Operator](2022/prox1.md)
