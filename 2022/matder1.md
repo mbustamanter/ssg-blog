@@ -111,7 +111,14 @@ X_{ij}B_{jk} \frac{\partial X_{ik}}{\partial X_{pq}} \\
 ### Traces of $AXBX$, $B^T XCXB$, $X^T BXC$ and $AXBX^TC$
 \begin{align*}
 \frac{\partial}{\partial X} \tr(AXBX) &=
-\frac{\partial (A_{ij}X_{jk}B_{kl}X_{li})}{\partial X_{pq}}
+\frac{\partial (A_{ij}X_{jk}B_{kl}X_{li})}{\partial X_{pq}} \\
+& = A_{ij} \frac{\partial X_{jk}}{\partial X_{pq}} B_{kl}X_{li}+
+A_{ij}X_{jk}B_{kl}\frac{\partial X_{li}}{\partial X_{pq}} \\
+&=A_{ij}\delta_{jp}\delta_{kq} B_{kl}X_{li}+
+A_{ij}X_{jk}B_{kl}\delta_{lp}\delta_{iq}
+=A_{ip}B_{ql}X_{li}+A_{qj}X_{jk}B_{kp} \\
+&=(A^T)_{pi} (X^T)_{il} (B^T)_{lq} + (AXB)_{qp}=(A^T X^T B^T)_{pq}+(AXB)^T_{pq} \\
+&=(A^T X^T B^T+(AXB)^T)_{pq}=A^T X^T B^T+B^T X^T A^T
 \end{align*}
 
 \begin{align*}

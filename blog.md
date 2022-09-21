@@ -1,5 +1,9 @@
 @def title = "Miguel's Blog"
 # Article archive
+These are articles I write only for myself in case I need to remember
+some results or proofs in the future. They contain theorems and techniques 
+I wanted to compile but were not grouped in the existing literature
+without my desired level of brevity. Under construction.
 \toc
 ## Numerical Analysis
 ### Finite Element Method (FEM)
