@@ -122,7 +122,13 @@ A_{ij}X_{jk}B_{kl}\delta_{lp}\delta_{iq}
 \end{align*}
 
 \begin{align*}
-\frac{\partial}{\partial X} \tr(B^T XCBX)=
+\frac{\partial}{\partial X} \tr(B^T XCBX) &=
+\frac{\partial(B_{ji}X_{jk}C_{kl}B_{lm}X_{mi})}{\partial X_{pq}} \\
+&=B_{ji} \frac{\partial X_{jk}}{\partial X_{pq}} C_{kl}B_{lm}X_{mi}+
+B_{ji}X_{jk}C_{kl}B_{lm}\frac{\partial X_{mi}}{\partial X_{pq}} \\
+&=B_{ji}\delta_{jp}\delta_{kq}C_{kl}B_{lm}X_{mi}+
+B_{ji}X_{jk}C_{kl}B_{lm}\delta_{mp}\delta_{iq} \\
+&=B_{pi}C_{ql}B_{lm}X_{mi}+B_{jq}X_{jk}C_{kl}B_{lp}
 \end{align*}
 
 \begin{align*}
