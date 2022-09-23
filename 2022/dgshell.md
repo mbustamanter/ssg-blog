@@ -17,11 +17,21 @@ g_3=\frac{\partial \varphi}{\partial \xi^3}=a_3
 g_{\alpha \beta}&=
 \inn{(a_\alpha-\xi^3 b^\lambda_\alpha a_\lambda),(a_\beta-\xi^3 b^\mu_\beta a_\mu)} \\
 &=\inn{a_\alpha,a_\beta}-\xi^3 b^\lambda_\alpha \inn{a_\lambda,a_\beta}
--\xi^3 b^\mu_\beta\inn{a_\mu,a_\alpha}+(xi^3)^2 b^\lambda_\alpha b^\mu_\beta\inn{a_\lambda,a_\mu}\\
+-\xi^3 b^\mu_\beta\inn{a_\mu,a_\alpha}+(\xi^3)^2 b^\lambda_\alpha b^\mu_\beta\inn{a_\lambda,a_\mu}\\
 &=a_{\alpha\beta}-\xi^3 b^\lambda_\alpha a_{\lambda\beta}-\xi^3 b^\mu_\beta a_{\mu\alpha}
 +(\xi^3)^2 b^\lambda_\alpha b^\mu_\beta a_{\lambda\mu} \\
-&=
+&=a_{\alpha\beta}-\xi^3 b_{\beta\alpha}-\xi^3 b_{\alpha\beta}
++(\xi^3)^2 b^\lambda_\alpha b_{\lambda\beta} \\
+&=a_{\alpha\beta}-2\xi b_{\alpha\beta}+(\xi^3)^2 c_{\alpha\beta}
 \end{align}
+
+\begin{equation}
+g_{\alpha 3}=\inn{g_\alpha,g_3}=0
+\end{equation}
+
+\begin{equation}
+g_{33}=\inn{g_3,g_3}=1
+\end{equation}
 ## Shell Kinematics
 \begin{equation}
 U(\xi^1,\xi^2,\xi^3)=u(\xi^1,\xi^2)+\xi^3 \theta_\lambda(\xi^1,\xi^2)a^\lambda(\xi^1,\xi^2)
