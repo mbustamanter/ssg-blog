@@ -33,5 +33,13 @@ e_{ij}=\frac 1 2 \par{g_i \cdot U_{,j}+g_j \cdot U_{,i}}
 \frac{\partial u}{\partial \xi^\alpha}
 +\xi^3 \frac{\partial (\theta_\lambda a^\lambda)}{\partial \xi^\alpha} \\
 &=(u_{\lambda|\alpha}-b_{\lambda\alpha}u_3+\xi^3 \theta_{\lambda|\alpha})a^\lambda
-+()a_3
++(u_{3,\alpha}+b^\lambda_\alpha u_\lambda+\xi^3 b^\lambda_\alpha \theta_\lambda)a_3
+\end{align}
+
+\begin{equation}
+\frac{\partial U}{\partial \xi^3}=\theta_\lambda a^\lambda
+\end{equation}
+
+\begin{align}
+e_{\alpha \beta} &=
 \end{align}
