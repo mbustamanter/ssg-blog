@@ -5,13 +5,30 @@
 ### Second Fundamental Form
 ### Third Fundamental Form
 ### The Metric Tensor as a function of the fundamental forms
+\begin{equation}
+g_\alpha=a_\alpha-\xi^3 b^\lambda_\alpha a_\alpha
+\end{equation}
+
+\begin{equation}
+g_3=\frac{\partial \varphi}{\partial \xi^3}=a_3
+\end{equation}
+
+\begin{align}
+g_{\alpha \beta}&=
+\inn{(a_\alpha-\xi^3 b^\lambda_\alpha a_\lambda),(a_\beta-\xi^3 b^\mu_\beta a_\mu)} \\
+&=\inn{a_\alpha,a_\beta}-\xi^3 b^\lambda_\alpha \inn{a_\lambda,a_\beta}
+-\xi^3 b^\mu_\beta\inn{a_\mu,a_\alpha}+(xi^3)^2 b^\lambda_\alpha b^\mu_\beta\inn{a_\lambda,a_\mu}\\
+&=a_{\alpha\beta}-\xi^3 b^\lambda_\alpha a_{\lambda\beta}-\xi^3 b^\mu_\beta a_{\mu\alpha}
++(\xi^3)^2 b^\lambda_\alpha b^\mu_\beta a_{\lambda\mu} \\
+&=
+\end{align}
 ## Shell Kinematics
 \begin{equation}
 U(\xi^1,\xi^2,\xi^3)=u(\xi^1,\xi^2)+\xi^3 \theta_\lambda(\xi^1,\xi^2)a^\lambda(\xi^1,\xi^2)
 \end{equation}
 
 \begin{equation}
-e_{ij}=\frac 1 2 \par{g_i \cdot U_{,j}+g_j \cdot U_{,i}}
+e_{ij}=\frac 1 2 \par{\inn{g_i,U_{,j}}+\inn{g_j,U_{,i}}}
 \end{equation}
 
 \begin{align}

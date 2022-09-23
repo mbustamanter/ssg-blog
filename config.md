@@ -24,7 +24,7 @@ website_url   = "https://tlienart.github.io/FranklinTemplates.jl/"
 Add here global latex commands to use throughout your pages.
 -->
 \newcommand{\R}{\mathbb R}
-\newcommand{\scal}[1]{\langle #1 \rangle}
+\newcommand{\inn}[1]{\langle #1 \rangle}
 \newcommand{\tr}{\textnormal{Tr}}
 \newcommand{\grad}{\textnormal{grad}}
 \newcommand{\dive}{\textnormal{div}}

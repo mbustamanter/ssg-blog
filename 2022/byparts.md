@@ -21,10 +21,10 @@ $$
 $$
 where $\frac{\partial u}{\partial \nu}$ is defined to be equal to
 the inner product between the gradient and the outward unit vector,
-$\scal{\grad u , \nu}$. Analogously, applying again \eqref{basic int} to
+$\inn{\grad u , \nu}$. Analogously, applying again \eqref{basic int} to
 the products $u v_{x_i}$ and summing over $i$ one gets
 $$
-\int_U \scal{\grad u, \grad v} dx = -\int_{\partial U} u\Delta v dx
+\int_U \inn{\grad u, \grad v} dx = -\int_{\partial U} u\Delta v dx
 +\int_{\partial U} u \frac{\partial v}{\partial \nu} dS
 \label{int 4}
 $$
@@ -53,12 +53,12 @@ $$
 as an evident consequence of \eqref{bi1}. To prove \eqref{bi1}, use \eqref{int 4}
 to see that
 $$
-\int_U u \Delta^2 v dx = -\int_U \scal{\grad u, \grad \Delta v} dx
+\int_U u \Delta^2 v dx = -\int_U \inn{\grad u, \grad \Delta v} dx
 +\int_{\partial U} u \frac{\partial \Delta v}{\partial \nu} dS
 $$
 and that the integral over $U$ can in turn be decomposed as
 $$
-\int_U \scal{\grad u, \grad\Delta v} dx=
+\int_U \inn{\grad u, \grad\Delta v} dx=
 -\int_U \Delta u \Delta v dx +
 \int_{\partial U} \Delta v \frac{\partial u}{\partial \nu} dS
 $$
