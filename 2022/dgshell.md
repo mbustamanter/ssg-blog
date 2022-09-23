@@ -22,7 +22,7 @@ g_{\alpha \beta}&=
 +(\xi^3)^2 b^\lambda_\alpha b^\mu_\beta a_{\lambda\mu} \\
 &=a_{\alpha\beta}-\xi^3 b_{\beta\alpha}-\xi^3 b_{\alpha\beta}
 +(\xi^3)^2 b^\lambda_\alpha b_{\lambda\beta} \\
-&=a_{\alpha\beta}-2\xi b_{\alpha\beta}+(\xi^3)^2 c_{\alpha\beta}
+&=a_{\alpha\beta}-2\xi^3 b_{\alpha\beta}+(\xi^3)^2 c_{\alpha\beta}
 \end{align}
 
 \begin{equation}
@@ -68,5 +68,9 @@ e_{ij}=\frac 1 2 \par{\inn{g_i,U_{,j}}+\inn{g_j,U_{,i}}}
 \end{equation}
 
 \begin{align}
-e_{\alpha \beta} &=
+\inn{g_\beta,U_{,\alpha}}&=
+\inn{(a_\beta-\xi^3 b^\mu_\beta a_\mu),(u_{\lambda|\alpha}-b_{\lambda\alpha}u_3
++\xi^3 \theta_{\lambda|\alpha})a^\lambda+(u_{3,\alpha}+b^\lambda_\alpha u_\lambda
++\xi^3 b^\lambda_\alpha \theta_\lambda)a_3} \\
+&=
 \end{align}
