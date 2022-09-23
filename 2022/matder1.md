@@ -70,6 +70,7 @@ $$
 $$
 ## Second-Order Trace Derivatives
 ### Traces of $X^2$ and $X^2 B$
+$$
 \begin{align*}
 \frac{\partial}{\partial X} \tr(X^2) & =\frac{\partial (X_{ij}X_{ji})}{\partial X_{pq}}
 =\frac{\partial X_{ij}}{\partial X_{pq}} X_{ji}+X_{ij}\frac{\partial X_{ji}}{\partial X_{pq}} \\
@@ -77,6 +78,7 @@ $$
 & =X_{qp}+X_{qp}=2(X^T)_{pq}
 =2X^T
 \end{align*}
+$$
 
 \begin{align*}
 \frac{\partial}{\partial X_{pq}} \tr(X^2 B) & =

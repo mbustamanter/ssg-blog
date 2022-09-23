@@ -13,3 +13,7 @@ U(\xi_1,\xi_2,\xi_3)=u(\xi_1,\xi_2)+\xi_3 \theta_\lambda(\xi_1,\xi_2)a^\lambda(\
 \begin{equation}
 e_{ij}=\frac 1 2 \par{g_i \cdot U_{,j}+g_j \cdot U_{,i}}
 \end{equation}
+
+\begin{equation}
+\frac{\partial u}{\partial \xi^\alpha} =
+\end{equation}
