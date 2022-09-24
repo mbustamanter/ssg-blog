@@ -72,5 +72,27 @@ e_{ij}=\frac 1 2 \par{\inn{g_i,U_{,j}}+\inn{g_j,U_{,i}}}
 \inn{(a_\beta-\xi^3 b^\mu_\beta a_\mu),(u_{\lambda|\alpha}-b_{\lambda\alpha}u_3
 +\xi^3 \theta_{\lambda|\alpha})a^\lambda+(u_{3,\alpha}+b^\lambda_\alpha u_\lambda
 +\xi^3 b^\lambda_\alpha \theta_\lambda)a_3} \\
-&=
+&=(u_{\lambda|\alpha}-b_{\lambda\alpha}u_3+\xi^3 \theta_{\lambda|\alpha})\delta_{\beta\lambda}
+-(u_{\lambda|\alpha}-b_{\lambda\alpha}u_3+\xi^3 \theta_{\lambda|\alpha})\xi^3
+b^\mu_\beta \delta_{\mu\lambda} \\
+&=u_{\beta|\alpha}-b_{\beta\alpha}u_3+\xi^3 \theta_{\beta|\alpha}
+-(u_{\mu|\alpha}-b_{\mu\alpha}u_3+\xi^3 \theta_{\mu|\alpha}) \xi^3 b^\mu_\beta \\
+&=u_{\beta|\alpha}-b_{\beta\alpha}u_3+\xi^3 \theta_{\beta|\alpha}
+-\xi^3 b^\mu_\beta u_{\mu|\alpha}+\xi^3 b^\mu_\beta b_{\mu\alpha} u_3
+-(\xi^3)^2 b^\mu_\beta \theta_{\mu|\alpha} \\
+&=u_{\beta|\alpha}-b_{\beta\alpha}u_3
++\xi^3 (\theta_{\beta|\alpha}-b^\mu_\beta u_{\mu|\alpha}+c_{\alpha\beta}u_3)
+-(\xi^3)^2 b^\mu_\beta \theta_{\mu|\alpha}
+\end{align}
+
+\begin{align}
+\inn{g_3,U_{,\alpha}}=\inn{a_3,U_{,\alpha}}=u_{3,\alpha}+b^\lambda_\alpha u_\lambda
++\xi^3 b^\lambda_\alpha \theta_\lambda
+\end{align}
+
+\begin{align}
+\inn{g_\alpha,U_{,3}} &=
+\inn{(a_\alpha-\xi^3 b^\lambda_\alpha a_\lambda),\theta_\mu a^\mu} \\
+&=\theta_\mu \delta_{\alpha\mu}-\xi^3 b^\lambda_\alpha \delta_{\lambda\mu} \theta_\mu
+=\theta_\alpha-\xi^3 b^\lambda_\alpha \theta_\lambda
 \end{align}
