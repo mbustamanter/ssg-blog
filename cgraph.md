@@ -1,5 +1,15 @@
 # Graphs in C
 \toc
+## Preamble
+First, we feed the preprocessor the required libraries and definitions to work with. ``<stdlib.h>``
+is included to allow the used of ``malloc()``. ``rep(i,a,b)`` is faster than writing ``for`` cycles and
+``MAXV`` represents the maximum number of vertices in the graph. Note that we count from 1.
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#define rep(i,a,b) for (int i=a; i<b; i++)
+#define MAXV 101
+```
 ## ``struct`` definition
 ```c
 typedef struct edgenode {
