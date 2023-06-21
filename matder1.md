@@ -115,17 +115,22 @@ A_{ij}X_{jk}B_{kl}\delta_{lp}\delta_{iq}
 \end{align}
 
 \begin{align}
-\frac{\partial}{\partial X} \tr(B^T XCBX) &=
-\frac{\partial(B_{ji}X_{jk}C_{kl}B_{lm}X_{mi})}{\partial X_{pq}} \\
-&=B_{ji} \frac{\partial X_{jk}}{\partial X_{pq}} C_{kl}B_{lm}X_{mi}+
-B_{ji}X_{jk}C_{kl}B_{lm}\frac{\partial X_{mi}}{\partial X_{pq}} \\
-&=B_{ji}\delta_{jp}\delta_{kq}C_{kl}B_{lm}X_{mi}+
-B_{ji}X_{jk}C_{kl}B_{lm}\delta_{mp}\delta_{iq} \\
-&=B_{pi}C_{ql}B_{lm}X_{mi}+B_{jq}X_{jk}C_{kl}B_{lp}
+\frac{\partial}{\partial X} \tr(A^T XCAX) &=
+\frac{\partial(A_{ji}X_{jk}C_{kl}A_{lm}X_{mi})}{\partial X_{pq}} \\
+&=A_{ji} \frac{\partial X_{jk}}{\partial X_{pq}} C_{kl}A_{lm}X_{mi}+
+A_{ji}X_{jk}C_{kl}A_{lm}\frac{\partial X_{mi}}{\partial X_{pq}} \\
+&=A_{ji}\delta_{jp}\delta_{kq}C_{kl}A_{lm}X_{mi}+
+A_{ji}X_{jk}C_{kl}A_{lm}\delta_{mp}\delta_{iq} \\
+&=A_{pi}C_{ql}A_{lm}X_{mi}+A_{jq}X_{jk}C_{kl}A_{lp}\\
+&=A_{pi}(X^T)_{im}(A^T)_{ml}(C^T)_{lq}+(A^T)_{pl}(C^T)_{lk}(X^T)_{kj}A_{jq}\\
+&=(AX^TA^TC^T)_{pq}+(A^TC^TX^TA)_{pq}=AX^TA^TC^T+A^TC^TX^TA
 \end{align}
 
 \begin{align}
-\frac{\partial}{\partial X} \tr(X^TBXC)=
+\frac{\partial}{\partial X} \tr(X^TBXC)&=
+\frac{\partial(X_{ji}B_{jk}X_{kl}C_{li})}{\partial X_{pq}} \\
+&=\delta_{jp}\delta_{iq}B_{jk}X_{kl}C_{li}+X_{ji}B_{jk}\delta_{kp}\delta_{lq}C_{li}\\
+&=B_{pk}X_{kl}C_{lq}+X_{ji}B_{jp}C_{qi}
 \end{align}
 
 \begin{align}
