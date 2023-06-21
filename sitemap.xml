@@ -8,6 +8,12 @@
     <priority>0.5</priority>
 </url>
 <url>
+    <loc>https://tlienart.github.io/FranklinTemplates.jl/cgraph/index.html</loc>
+    <lastmod>2023-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
     <loc>https://tlienart.github.io/FranklinTemplates.jl/albahari1/index.html</loc>
     <lastmod>2023-06-21</lastmod>
     <changefreq>monthly</changefreq>

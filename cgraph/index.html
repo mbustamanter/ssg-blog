@@ -1,0 +1,28 @@
+<!doctype html> <html lang=en > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <link rel=stylesheet  href="/ssg-blog/libs/highlight/github.min.css"> <link rel=stylesheet  href="/ssg-blog/css/franklin.css"> <link rel=stylesheet  href="/ssg-blog/css/tufte.css"> <link rel=stylesheet  href="/ssg-blog/css/latex.css"> <link rel=stylesheet  href="/ssg-blog/css/adjust.css"> <link rel=icon  href="/ssg-blog/assets/favicon.png"> <title>Graphs in C</title> <div id=layout > <div id=menu > <ul> <li><a href="/ssg-blog/">Home</a> <li><a href="/ssg-blog/blog/">Archive</a> </ul> </div> <div id=main > <div class=franklin-content ><h1 id=graphs_in_c ><a href="#graphs_in_c" class=header-anchor >Graphs in C</a></h1> <div class=franklin-toc ><ol><li><a href="#struct_definition"><code>struct</code> definition</a><li><a href="#initialization_and_construction">Initialization and Construction</a></ol></div> <h2 id=struct_definition ><a href="#struct_definition" class=header-anchor ><code>struct</code> definition</a></h2> <pre><code class="c hljs"><span class=hljs-keyword >typedef</span> <span class=hljs-class ><span class=hljs-keyword >struct</span> <span class=hljs-title >edgenode</span> {</span>
+    <span class=hljs-type >int</span> y;
+    <span class=hljs-class ><span class=hljs-keyword >struct</span> <span class=hljs-title >edgenode</span> *<span class=hljs-title >next</span>;</span>
+} edgenode;
+<span class=hljs-keyword >typedef</span> <span class=hljs-class ><span class=hljs-keyword >struct</span> {</span>
+    edgenode *edges[MAXV];
+    <span class=hljs-type >int</span> degree[MAXV];
+    <span class=hljs-type >int</span> nvertices,nedges;
+} graph;</code></pre> <h2 id=initialization_and_construction ><a href="#initialization_and_construction" class=header-anchor >Initialization and Construction</a></h2> <pre><code class="c hljs"><span class=hljs-type >void</span> <span class="hljs-title function_">initialize_graph</span><span class=hljs-params >(graph *g)</span> {
+    g-&gt;nvertices=<span class=hljs-number >0</span>; g-&gt;nedges=<span class=hljs-number >0</span>;
+    rep (i,<span class=hljs-number >0</span>,MAXV) g-&gt;edges[i]=<span class=hljs-literal >NULL</span>;
+    rep (i,<span class=hljs-number >0</span>,MAXV) g-&gt;degree[i]=<span class=hljs-number >0</span>;
+}</code></pre> <pre><code class="c hljs"><span class=hljs-type >void</span> <span class="hljs-title function_">insert_edge</span><span class=hljs-params >(graph *g, <span class=hljs-type >int</span> x, <span class=hljs-type >int</span> y, <span class=hljs-type >int</span> und)</span> {
+    edgenode *p=<span class=hljs-built_in >malloc</span>(<span class=hljs-keyword >sizeof</span>(edgenode));
+    p-&gt;y=y; p-&gt;next=g-&gt;edges[x]; g-&gt;edges[x]=p; g-&gt;degree[x]++;
+    <span class=hljs-keyword >if</span> (und==<span class=hljs-number >1</span>) {
+        insert_edge(g,y,x,<span class=hljs-number >0</span>);
+        g-&gt;nedges++;
+    }
+}
+<span class=hljs-type >void</span> <span class="hljs-title function_">read_graph</span><span class=hljs-params >(graph *g, <span class=hljs-type >int</span> n, <span class=hljs-type >int</span> m)</span> {
+    initialize_graph(g); g-&gt;nvertices=n;
+    <span class=hljs-type >int</span> x,y;
+    rep (i,<span class=hljs-number >0</span>,m) {
+        <span class=hljs-built_in >scanf</span>(<span class=hljs-string >&quot;%d %d\n&quot;</span>,&amp;x,&amp;y);
+        insert_Edge(g,x,y,<span class=hljs-number >1</span>);
+    }
+}</code></pre> <div class=page-foot > <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> Miguel Bustamante. Last modified: June 21, 2023. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>. </div> </div> </div> </div>
