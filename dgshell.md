@@ -2,6 +2,10 @@
 \toc
 ## Differential Forms
 ### First Fundamental Form
+The first fundamental form is calculated using
+\begin{equation}
+a_{\alpha\beta}=\inn{a_\alpha,a_\beta}
+\end{equation}
 ### Second Fundamental Form
 ### Third Fundamental Form
 ### The Metric Tensor as a function of the fundamental forms
