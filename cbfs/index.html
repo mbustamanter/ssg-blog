@@ -1,0 +1,43 @@
+<!doctype html> <html lang=en > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <link rel=stylesheet  href="/ssg-blog/libs/highlight/github.min.css"> <link rel=stylesheet  href="/ssg-blog/css/franklin.css"> <link rel=stylesheet  href="/ssg-blog/css/tufte.css"> <link rel=stylesheet  href="/ssg-blog/css/latex.css"> <link rel=stylesheet  href="/ssg-blog/css/adjust.css"> <link rel=icon  href="/ssg-blog/assets/favicon.png"> <title>Breadth-First Search</title> <div id=layout > <div id=menu > <ul> <li><a href="/ssg-blog/">Home</a> <li><a href="/ssg-blog/blog/">Archive</a> </ul> </div> <div id=main > <div class=franklin-content ><h1 id=breadth-first_search ><a href="#breadth-first_search" class=header-anchor >Breadth-First Search</a></h1> <div class=franklin-toc ><ol><li><a href="#queue_struct"><code>queue</code> struct</a><li><a href="#before_searching_and_processing">Before Searching and Processing</a><li><a href="#search">Search</a></ol></div> <h2 id=queue_struct ><a href="#queue_struct" class=header-anchor ><code>queue</code> struct</a></h2> <pre><code class="c hljs"><span class=hljs-keyword >typedef</span> <span class=hljs-class ><span class=hljs-keyword >struct</span> {</span>
+    <span class=hljs-type >int</span> q[MAXV+<span class=hljs-number >1</span>];
+    <span class=hljs-type >int</span> first,last,count;
+} <span class=hljs-built_in >queue</span>;
+<span class=hljs-type >void</span> <span class="hljs-title function_">init_queue</span><span class=hljs-params >(<span class=hljs-built_in >queue</span> *q)</span> {
+    q-&gt;first=<span class=hljs-number >0</span>; q-&gt;last=MAXV<span class=hljs-number >-1</span>; q-&gt;count=<span class=hljs-number >0</span>;
+}
+<span class=hljs-type >void</span> <span class="hljs-title function_">enqueue</span><span class=hljs-params >(<span class=hljs-built_in >queue</span> *q, <span class=hljs-type >int</span> x)</span> {
+    q-&gt;last=(q-&gt;last+<span class=hljs-number >1</span>)%MAXV;
+    q-&gt;q[q-&gt;last]=x;
+    q-&gt;count++;
+}
+<span class=hljs-type >int</span> <span class="hljs-title function_">dequeue</span><span class=hljs-params >(<span class=hljs-built_in >queue</span> *q)</span> {
+    <span class=hljs-type >int</span> res=q-&gt;q[q-&gt;first];
+    q-&gt;first=(q-&gt;first+<span class=hljs-number >1</span>)%MAXV;
+    q-&gt;count--; <span class=hljs-keyword >return</span> res;
+}
+<span class=hljs-type >int</span> <span class="hljs-title function_">empty_queue</span><span class=hljs-params >(<span class=hljs-built_in >queue</span> *q)</span> {
+    <span class=hljs-keyword >return</span> (q-&gt;count&lt;=<span class=hljs-number >0</span>);
+}</code></pre> <h2 id=before_searching_and_processing ><a href="#before_searching_and_processing" class=header-anchor >Before Searching and Processing</a></h2> <pre><code class="c hljs"><span class=hljs-type >void</span> <span class="hljs-title function_">initialize_search</span><span class=hljs-params >()</span> {
+    rep (i,<span class=hljs-number >0</span>,MAXV) discovered[i]=<span class=hljs-number >0</span>;
+}</code></pre> <pre><code class="c hljs"><span class=hljs-type >void</span> <span class="hljs-title function_">process_vertex_early</span><span class=hljs-params >(<span class=hljs-type >int</span> v)</span> {
+}
+<span class=hljs-type >void</span> <span class="hljs-title function_">process_vertex_late</span><span class=hljs-params >(<span class=hljs-type >int</span> v)</span> {
+}
+<span class=hljs-type >void</span> <span class="hljs-title function_">process_edge</span><span class=hljs-params >(<span class=hljs-type >int</span> v, <span class=hljs-type >int</span> y)</span> {
+}</code></pre> <h2 id=search ><a href="#search" class=header-anchor >Search</a></h2> <pre><code class="c hljs"><span class=hljs-type >void</span> <span class="hljs-title function_">bfs</span><span class=hljs-params >(graph *g, <span class=hljs-type >int</span> start)</span> {
+    edgenode *p; <span class=hljs-type >int</span> v,y; <span class=hljs-built_in >queue</span> q;
+    init_queue(&amp;q); enqueue(&amp;q,start);
+    discovered[start]=<span class=hljs-number >1</span>;
+    <span class=hljs-keyword >while</span> (empty_queue(&amp;q)==<span class=hljs-number >0</span>) {
+        v=dequeue(&amp;q);
+        p=g-&gt;edges[x];
+        <span class=hljs-keyword >while</span> (p!=<span class=hljs-literal >NULL</span>) {
+            y=p-&gt;y;
+            <span class=hljs-keyword >if</span> (discovered[y]==<span class=hljs-number >0</span>) {
+                enqueue(&amp;q,y);
+                discovered[y]=<span class=hljs-number >1</span>;
+            }
+            p=p-&gt;next;
+        }
+    }
+}</code></pre> <div class=page-foot > <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> Miguel Bustamante. Last modified: June 22, 2023. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>. </div> </div> </div> </div>
