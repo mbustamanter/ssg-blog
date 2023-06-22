@@ -45,7 +45,7 @@ void read_graph(graph *g, int n, int m) {
     int x,y;
     rep (i,0,m) {
         scanf("%d %d\n",&x,&y);
-        insert_Edge(g,x,y,1);
+        insert_edge(g,x,y,1);
     }
 }
 ```
