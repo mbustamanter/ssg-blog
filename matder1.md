@@ -130,7 +130,8 @@ A_{ji}X_{jk}C_{kl}A_{lm}\delta_{mp}\delta_{iq} \\
 \frac{\partial}{\partial X} \tr(X^TBXC)&=
 \frac{\partial(X_{ji}B_{jk}X_{kl}C_{li})}{\partial X_{pq}} \\
 &=\delta_{jp}\delta_{iq}B_{jk}X_{kl}C_{li}+X_{ji}B_{jk}\delta_{kp}\delta_{lq}C_{li}\\
-&=B_{pk}X_{kl}C_{lq}+X_{ji}B_{jp}C_{qi}
+&=B_{pk}X_{kl}C_{lq}+X_{ji}B_{jp}C_{qi}=(BXC)_{pq}+(B^T)_{pj}X_{ji}(C^T)_{iq} \\
+&=(BXC)_{pq}+(B^TXC)_{pq}=BXC+B^TXC
 \end{align}
 
 \begin{align}
