@@ -135,5 +135,9 @@ A_{ji}X_{jk}C_{kl}A_{lm}\delta_{mp}\delta_{iq} \\
 \end{align}
 
 \begin{align}
-\frac{\partial}{\partial X} \tr(AXBX^TC)=
+\frac{\partial}{\partial X} \tr(AXBX^TC)&=
+\frac{\partial(X_{ji}B_{jk}X_{kl}C_{li})}{\partial X_{pq}} \\
+&=\delta_{jp}\delta_{iq}B_{jk}X_{kl}C_{li}+X_{ji}B_{jk}\delta_{kp}\delta_{lq}C_{li}\\
+&=B_{pk}X_{kl}C_{lq}+B_{jp}X_{ji}C_{qi}=(BXC)_{pq}+(B^TXC^T)_{pq}\\
+&=BXC+B^TXC^T
 \end{align}
