@@ -11,6 +11,9 @@ and ``MAXV`` represents the maximum number of vertices in the graph. Note that w
 #define MAXV 101
 ```
 ## ``struct`` definition
+The ``edgenode`` struct contains information about the node at the end of the edgde, and
+the ``graph`` is defined using the adjacency list represenation, while keeping information
+about each node in the form of a list that represents the number of neighbors it has.
 ```c
 typedef struct edgenode {
     int y;
@@ -23,6 +26,8 @@ typedef struct {
 } graph;
 ```
 ## Initialization and Construction
+We need to make sure the graph is properly initialized, that is, each adjacency list is empty
+and it node isn't pointing to any other node.
 ```c
 void initialize_graph(graph *g) {
     g->nvertices=0; g->nedges=0;
@@ -30,7 +35,9 @@ void initialize_graph(graph *g) {
     rep (i,0,MAXV) g->degree[i]=0;
 }
 ```
-
+Then the functions for inserting edges and reading the graph. This version of the ``inser_edge`` 
+function supports directed and nod-directed insertions, and  the ``read_graph`` function
+reads edges in the form of two ``int`` variables. Each variable represents one end of an edge.
 ```c
 void insert_edge(graph *g, int x, int y, int und) {
     edgenode *p=malloc(sizeof(edgenode));
